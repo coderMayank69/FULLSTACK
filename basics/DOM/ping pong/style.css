@@ -1,0 +1,11 @@
+#main{
+    width: 430px;
+}
+.winner{
+    color : green;
+}
+
+.loser{
+    color : red;
+}
+

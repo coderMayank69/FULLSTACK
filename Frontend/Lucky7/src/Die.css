@@ -1,0 +1,17 @@
+.Die{
+    background-color: slateblue;
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+    font-size: 50px;
+    height: 100px;
+    line-height: 100px;
+    margin: 20px;
+    text-align: center;
+    width: 100px;
+}
+
+/* Debug helpers: add a high-contrast outline and ensure visibility if color prop is missing */
+.Die {
+    outline: 2px solid rgba(0,0,0,0.15);
+}

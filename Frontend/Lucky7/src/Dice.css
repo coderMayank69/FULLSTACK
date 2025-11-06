@@ -1,0 +1,10 @@
+.Dice{
+    border: 2px solid rgb(116, 112, 112);
+    border-radius: 20px;
+    padding: 1em; /* uniform padding */
+    text-align: center;
+    margin: 1em 0; /* vertical spacing only - no horizontal auto centering */
+    width: 100%;
+    max-width: 1200px; /* optional: prevent ultra-wide on large screens */
+    align-self: stretch; /* ensure it stretches when inside flex container */
+}

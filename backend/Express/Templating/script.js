@@ -1,0 +1,29 @@
+const express = require('express');
+const app = express();
+const path = require('path');
+const redditData = require('./data.json');
+
+
+app.use(express.static(path.join(__dirname,'/public')));
+
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+app.get('/', (req, res) => {
+    num = Math.floor(Math.random()*10);
+    res.render('home.ejs', {num});
+});
+app.get('/r/:subreddit',(req,res) =>{
+    const {subreddit} =req.params;
+    console.log(subreddit);
+    const data = redditData[subreddit];
+    if(data){
+       res.render('subreddit',{...data});  
+    }else{
+        res.render('notfound',{subreddit});
+    }
+   
+})
+app.listen(3000,(req,res)=>{
+    console.log('Server is running on port 3000');
+})
